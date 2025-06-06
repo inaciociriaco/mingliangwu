@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Hide scrollbars */
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game-container {
+    width: 600px;
+    height: 200px;
+    border: 1px solid #000;
+    position: relative;
+    overflow: hidden; /* Crucial for moving elements */
+    background-color: white;
+}
+
+#dino {
+    width: 60px; /* Increased width for a more rectangular dino */
+    height: 60px; /* Increased height */
+    background-color: #666; /* Placeholder color */
+    /* For a simple square dino, you might use an image later */
+    /* background-image: url('dino.png'); */
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+    position: absolute;
+    bottom: 0; /* Starts on the ground */
+    left: 50px;
+    /* Simple animation for running */
+    /* animation: dino-run 0.5s infinite steps(2); */
+}
+
+/* Basic running animation placeholder */
+/*
+@keyframes dino-run {
+    0% { background-position-x: 0; }
+    100% { background-position-x: -120px; } /* Assuming sprite sheet width for 2 frames */
+}
+*/
+
+.obstacle {
+    width: 20px; /* Default width, can be overridden */
+    height: 50px; /* Default height */
+    background-color: #333; /* Placeholder color for obstacles */
+    /* background-image: url('cactus.png'); */
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+    position: absolute;
+    bottom: 0; /* Starts on the ground */
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+#game-over-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #555;
+    text-align: center;
+}
+
+#ground {
+    width: 100%;
+    height: 20px; /* Thickness of the ground line */
+    background-color: #333; /* Color of the ground */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
